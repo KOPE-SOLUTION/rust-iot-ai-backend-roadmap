@@ -1,119 +1,117 @@
 # Rust IoT + AI Backend Roadmap
 
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Rust](https://img.shields.io/badge/rust-1.75%2B-orange.svg)
+![Platform](https://img.shields.io/badge/platform-IoT%20%7C%20Backend%20%7C%20AI-red.svg)
+
 A structured 90-day roadmap for learning and building real-world backend systems with Rust, focused on IoT, data processing, and AI event integration.
+
+---
 
 ## Overview
 
-This repository documents a hands-on Rust learning journey designed around production-oriented backend engineering.  
-The roadmap combines backend development, MQTT-based IoT ingestion, database integration, analytics pipelines, and AI event processing.
+This repository documents a hands-on Rust learning journey designed around production-oriented backend engineering.
 
-The goal is not only to learn Rust syntax, but to build a backend architecture that can evolve into real systems such as:
+The roadmap combines:
+- Backend development (Rust + Axum)
+- MQTT-based IoT ingestion
+- Database integration (SQLx)
+- Data processing pipelines (ETL + Polars)
+- AI event integration
 
-- Smart Farm
-- Smart Hydroponic
-- Smart Building
-- Security / CCTV analytics
-- Industrial IoT platforms
-- AI-integrated monitoring systems
+---
 
 ## Objectives
 
-- Learn Rust fundamentals through practical mini-projects
-- Build backend APIs with Axum and Tokio
-- Process MQTT telemetry from IoT devices
-- Store and query structured data using SQLx
-- Build ETL and analytics workflows
-- Integrate AI-generated events into backend pipelines
-- Design a capstone Rust IoT event platform
+- Master Rust for backend systems
+- Build async services with Tokio
+- Integrate MQTT for IoT telemetry
+- Store and process data efficiently
+- Build analytics and rule engine systems
+- Connect AI events into backend pipelines
+
+---
 
 ## Roadmap Structure
 
 ### Month 1 — Rust Fundamentals
-- Rust syntax basics
-- Ownership and borrowing
+- Syntax, ownership, borrowing
 - Struct / Enum / Result / Option
-- Modules, JSON, and file I/O
-- Intro to Axum API development
+- JSON & File I/O
+- Axum API basics
 
 ### Month 2 — Backend Systems
-- Async Rust with Tokio
+- Async Rust (Tokio)
 - MQTT consumer service
-- Database integration with SQLx
-- REST API + MQTT + DB integration
-- Service-oriented backend structure
+- Database integration (SQLx)
+- API + MQTT + DB pipeline
 
 ### Month 3 — Data + AI Integration
-- CSV / JSON ETL
-- Analytics with Polars
-- Rule engine design
+- ETL pipeline
+- Polars analytics
+- Rule engine
 - AI event gateway
-- Capstone backend platform
+- Capstone IoT platform
 
-## Current Work Packages
+---
 
-This roadmap is also tracked in OpenProject using a hierarchical structure:
+## Architecture Overview
 
-- Month
-  - Week
-    - Task
+```text
+IoT Devices → MQTT Broker → Rust Backend → Database → API → Dashboard
+```
 
-Example:
-
-- Month 1 — Rust Fundamentals
-  - Week 1 — Rust Basics + Ownership
-    - Learn Rust syntax basics
-    - Practice ownership and borrowing
-    - Build sensor CLI tool
-    - Implement 4–20mA converter
-    - Create MQTT topic parser
+---
 
 ## Planned Mini Projects
 
-- sensor CLI tool
-- telemetry JSON validator
+- Sensor CLI tool
+- Telemetry JSON validator
 - Axum API starter
 - MQTT consumer service
-- SQLx storage service
-- telemetry ETL tool
-- Polars analytics summary
-- rule engine service
-- AI event gateway
-- capstone IoT event platform
+- SQLx storage layer
+- Polars analytics engine
+- Rule-based alert system
+- AI event ingestion service
+- Capstone IoT event platform
 
-## Suggested Tech Stack
+---
 
-- **Language:** Rust
-- **Async runtime:** Tokio
-- **Web framework:** Axum
-- **Database layer:** SQLx
-- **MQTT client:** rumqttc
-- **Data processing:** Polars
-- **Serialization:** serde / serde_json
+## Tech Stack
+- Language: Rust
+- Async runtime: Tokio
+- Web framework: Axum
+- Database: PostgreSQL + SQLx
+- MQTT: rumqttc
+- Data processing: Polars
+- Serialization: serde / serde_json
 
-## Repository Goals
+---
 
-This repository is intended to become:
+## Project Statatus
 
-1. A personal Rust learning roadmap
-2. A portfolio project for backend / IoT / AI engineering
-3. A foundation for future real-world product development
+In Progress — Actively building week-by-week based on roadmap.
 
-## Project Status
-
-Active development.
-
-The roadmap has been imported into OpenProject and is being executed week by week.
+---
 
 ## Future Direction
 
-This project may evolve into a larger Rust-based backend platform for:
+This project will evolve into a scalable backend platform for:
+- Smart Farm
+- Smart Hydroponic
+- Smart Building
+- Industrial IoT
+- AI-driven monitoring systems
 
-- IoT telemetry ingestion
-- event-driven alerting
-- AI-generated event processing
-- analytics dashboards
-- smart infrastructure systems
+---
 
 ## License
 
-MIT
+This project is licensed under the MIT License – see the LICENSE file for details.
+
+---
+
+## Author
+
+Kittisak Hanheam
+Public Release Date: 2026-03-22
