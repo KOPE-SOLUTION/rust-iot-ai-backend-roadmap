@@ -43,3 +43,14 @@ Thumbs.db
 # =========================
 tmp/
 temp/
+
+# Python (ถ้ามี AI pipeline)
+__pycache__/
+*.pyc
+.venv/
+
+# Node (ถ้ามี dashboard)
+node_modules/
+
+# Docker
+*.tar
