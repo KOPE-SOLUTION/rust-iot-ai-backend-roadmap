@@ -54,3 +54,7 @@ node_modules/
 
 # Docker
 *.tar
+
+# Added by cargo
+
+/target
