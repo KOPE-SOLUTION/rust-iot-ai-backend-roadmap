@@ -1,0 +1,23 @@
+[
+  {
+    "device_id": "node-01",
+    "sensor": "temp",
+    "value": 27.5,
+    "status": "VALID",
+    "message": "OK"
+  },
+  {
+    "device_id": "node-02",
+    "sensor": "humidity",
+    "value": 65.0,
+    "status": "VALID",
+    "message": "OK"
+  },
+  {
+    "device_id": "node-03",
+    "sensor": "humidity",
+    "value": 120.0,
+    "status": "INVALID",
+    "message": "humidity 120 out of range"
+  }
+]
