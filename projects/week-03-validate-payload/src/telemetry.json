@@ -1,0 +1,7 @@
+{
+  "device_id": "node-01",
+  "sensor": "temp",
+  "value": 27.5,
+  "unit": "C",
+  "timestamp": "2026-03-24T14:00:00Z"
+}
