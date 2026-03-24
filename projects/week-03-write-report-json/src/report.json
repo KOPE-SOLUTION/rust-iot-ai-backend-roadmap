@@ -1,0 +1,7 @@
+{
+  "device_id": "node-01",
+  "sensor": "temp",
+  "value": 27.5,
+  "status": "VALID",
+  "message": "Payload is valid"
+}
