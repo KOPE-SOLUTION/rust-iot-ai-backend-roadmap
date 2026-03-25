@@ -1,6 +1,7 @@
-use serde::{Deserialize, Serialize};
+use serde::{Serialize};
+use sqlx::FromRow;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, FromRow)]
 pub struct Device {
     pub device_id: String,
     pub site_id: String,

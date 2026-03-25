@@ -1,19 +1,24 @@
-use axum::Json;
-use std::fs;
+use axum::{extract::State, Json};
+use sqlx::SqlitePool;
 use tracing::info;
 
 use crate::models::device::Device;
 
-pub async fn get_devices() -> Json<Vec<Device>> {
-    info!("Fetching devices...");
-    
-    let content =
-        fs::read_to_string("devices.json")
-        .expect("failed to read devices.json");
+pub async fn get_devices(
+    State(pool): State<SqlitePool>,
+) -> Json<Vec<Device>> {
+    info!("GET /devices");
 
-    let devices: Vec<Device> =
-        serde_json::from_str(&content)
-        .expect("failed to parse devices.json");
+    let devices = sqlx::query_as::<_, Device>(
+        r#"
+        SELECT device_id, site_id, name, online
+        FROM devices
+        ORDER BY device_id
+        "#,
+    )
+    .fetch_all(&pool)
+    .await
+    .expect("failed to fetch devices");
 
     Json(devices)
 }

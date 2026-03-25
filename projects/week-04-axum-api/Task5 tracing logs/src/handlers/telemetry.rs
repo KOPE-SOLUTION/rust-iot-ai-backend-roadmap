@@ -1,20 +1,24 @@
-use axum::Json;
-use std::fs;
+use axum::{extract::State, Json};
+use sqlx::SqlitePool;
 use tracing::info;
 
 use crate::models::telemetry::Telemetry;
 
-pub async fn latest_telemetry() -> Json<Vec<Telemetry>> {
+pub async fn latest_telemetry(
+    State(pool): State<SqlitePool>,
+) -> Json<Vec<Telemetry>> {
+    info!("GET /telemetry/latest");
 
-    info!("Fetching latest telemetry...");
+    let telemetry = sqlx::query_as::<_, Telemetry>(
+        r#"
+        SELECT device_id, sensor, value, unit, timestamp
+        FROM telemetry_latest
+        ORDER BY timestamp DESC
+        "#,
+    )
+    .fetch_all(&pool)
+    .await
+    .expect("failed to fetch telemetry");
 
-    let content =
-        fs::read_to_string("telemetry_latest.json")
-        .expect("failed to read telemetry_latest.json");
-
-    let data: Vec<Telemetry> =
-        serde_json::from_str(&content)
-        .expect("failed to parse telemetry_latest.json");
-
-    Json(data)
+    Json(telemetry)
 }
