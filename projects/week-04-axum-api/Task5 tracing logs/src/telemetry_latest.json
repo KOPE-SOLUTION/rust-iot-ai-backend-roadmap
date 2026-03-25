@@ -1,0 +1,16 @@
+[
+  {
+    "device_id": "node-01",
+    "sensor": "temp",
+    "value": 27.5,
+    "unit": "C",
+    "timestamp": "2026-03-26T10:00:00Z"
+  },
+  {
+    "device_id": "node-02",
+    "sensor": "humidity",
+    "value": 68.2,
+    "unit": "%",
+    "timestamp": "2026-03-26T10:01:00Z"
+  }
+]
