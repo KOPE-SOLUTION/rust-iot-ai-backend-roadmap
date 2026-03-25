@@ -1,0 +1,14 @@
+[
+  {
+    "device_id": "node-01",
+    "site_id": "farm-1",
+    "name": "Greenhouse Temp Node",
+    "online": true
+  },
+  {
+    "device_id": "node-02",
+    "site_id": "farm-1",
+    "name": "Humidity Node",
+    "online": false
+  }
+]
